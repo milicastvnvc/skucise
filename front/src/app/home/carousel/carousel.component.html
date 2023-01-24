@@ -1,0 +1,36 @@
+
+
+<div class="section">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="font-weight-bold text-primary heading">Popular Properties</h2>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <p><a href="#" target="_blank" class="btn btn-primary text-white py-3 px-4">View all properties</a></p>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-12">
+
+
+                <div class="property-slider-wrap">
+                    <div class="property-slider">
+                        <!-- ovde ce biti najpoprularniji oglasi, i dole 3 tackice, tako da se korisniku prikazuju 3 po 3 -->
+                        <app-property></app-property>
+                        
+                    </div>
+
+                    <!-- ovo je navigacija za karusel najpopularnijih oglasa, koji trenutno ne radi!! -->
+                    <div id="property-nav" class="controls" tabindex="0" aria-label="Carousel Navigation">
+                        <span class="prev" data-controls="prev" aria-controls="property" tabindex="-1">Prev</span>
+                        <span class="next" data-controls="next" aria-controls="property" tabindex="-1">Next</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-6">
+                <form>
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <input (keydown.enter)="onSubmit()" [(ngModel)]="email" name="email" type="email" id="formEmail" class="form-control" placeholder="Unesite e-mail">
+                            <p *ngIf="wrongMail" class="small fw-bold mt-2 pt-1 mb-0 text-danger">Mejl koji ste uneli nije ispravan!!</p>
+                            <br>
+                            <input (keydown.enter)="onSubmit()" [(ngModel)]="password" name="password" type="password" id="formPassword" class="form-control" placeholder="Unesite lozinku">
+                            <p *ngIf="passwordNotEntered" class="small fw-bold mt-2 pt-1 mb-0 text-danger">Morate uneti lozinku!</p>
+                            <p *ngIf="wrongCredentials" class="small fw-bold mt-2 pt-1 mb-0 text-danger">Email ili lozinka nisu ispravni.</p>
+                            <p *ngIf="accessNotApproved" class="small fw-bold mt-2 pt-1 mb-0 text-danger">Vaša registracija još uvek nije odobrena.</p>
+                        </div>
+
+
+                        <div class="col-12" style="text-align: center;">
+                            <input #login type="button" value="Prijavi se" (click)="onSubmit()" class="btn btn-primary"><br><br>
+                            <p>Još uvek nemate profil? <a [routerLink] = "['/register']" class="link-secondary">REGISTRUJ SE SADA!</a></p>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
